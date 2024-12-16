@@ -1,0 +1,10 @@
+body {
+  font-family: "apparat-excond", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

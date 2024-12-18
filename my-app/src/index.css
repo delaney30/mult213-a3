@@ -9,13 +9,12 @@ code {
     monospace;
 }
 
-
 .characters {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  gap: 16px; 
-  padding: 16px;
+  grid-template-columns: 1fr 1fr 1fr; 
+  gap: 15px; 
   border: 2px solid black;
   padding: 50px;
-  margin: 30px;
+  margin: 40px;
 }
+

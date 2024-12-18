@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import './index.css';
 
@@ -30,6 +30,12 @@ function AvengerCard({ name, description, powers, onAddToFavourites }) {
 
 function App() {
   const [favourites, setFavourites] = useState([]);
+  const [avengerCount, setAvengerCount] = useState(0);
+
+  //Adds a counter to how many favourite avengers you have with useEffect 
+  useEffect(() => {
+    setAvengerCount(favourites.length);
+  }, [favourites]);
 
   const avengerCharacters = [
     { name: "Iron Man", description: "A genius billionaire who builds an advanced armored suit.", powers: "Flight, repulsor blasts, genius intellect" },
@@ -65,6 +71,7 @@ function App() {
       {favourites.length > 0 && (
         <div className="favourites-list">
           <h2>Favourite Avengers</h2>
+          <p>How many Favourite Avengers do you have?: {avengerCount}</p>
           <ul>
             {favourites.map((fav, index) => (
               <ul key={index}>{fav}</ul>

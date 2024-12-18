@@ -8,3 +8,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.characters {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 16px; 
+  padding: 16px;
+  border: 2px solid black;
+  padding: 50px;
+  margin: 30px;
+}

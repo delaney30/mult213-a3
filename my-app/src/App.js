@@ -65,10 +65,10 @@ function App() {
         <div className="favourites-list">
           <ul>
             {favourites.map((fav, index) => (
-              <li key={index}>
+              <ul key={index}>
                 {fav}
                 <button onClick={() => handleRemoveFromFavourites(fav)}>Remove</button>
-              </li>
+              </ul>
             ))}
           </ul>
         </div>

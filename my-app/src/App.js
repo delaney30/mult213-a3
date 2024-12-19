@@ -50,6 +50,10 @@ function App() {
     }
   };
 
+  const handleRemoveFromFavourites = (name) => {
+    setFavourites(favourites.filter((fav) => fav !== name));
+  };
+
   return (
     <div className="App">
       <h1>MARVEL</h1>
@@ -59,14 +63,18 @@ function App() {
 
       {favourites.length > 0 && (
         <div className="favourites-list">
+          <ul>
             {favourites.map((fav, index) => (
-              <ul key={index}>{fav}</ul>
+              <li key={index}>
+                {fav}
+                <button onClick={() => handleRemoveFromFavourites(fav)}>Remove</button>
+              </li>
             ))}
+          </ul>
         </div>
       )}
 
       <p>Please select your favourite characters!</p>
-
       <div className="characters-container">
         {avengerCharacters.map((character, index) => (
           <AvengerCard

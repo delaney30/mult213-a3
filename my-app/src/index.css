@@ -41,6 +41,15 @@ button:hover {
   box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7);
 }
 
+.favourites-list button {
+  background-color: #3e3148;
+  color: beige;
+  width: 100px;
+  height: 30px;
+  border-radius: 20px;
+  margin-left: 20px;
+}
+
 .App {
   padding: 15px;
   margin: 20px;

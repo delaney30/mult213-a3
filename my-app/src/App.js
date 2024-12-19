@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import './index.css';
-
 // import md5 from 'crypto-js/md5';
 
 // function example() {
@@ -16,7 +15,6 @@ import './index.css';
 //     .then(data => console.log(data))
 //     .catch(error => console.error('Error:', error));
 // }
-
 function AvengerCard({ name, description, powers, onAddToFavourites }) {
   return (
     <div className="characters">
@@ -32,7 +30,7 @@ function App() {
   const [favourites, setFavourites] = useState([]);
   const [avengerCount, setAvengerCount] = useState(0);
 
-  //Adds a counter to how many favourite avengers you have with useEffect 
+  // Adds a counter to how many favourite Avengers you have with useEffect
   useEffect(() => {
     setAvengerCount(favourites.length);
   }, [favourites]);
@@ -44,7 +42,6 @@ function App() {
     { name: "Black Widow", description: "A skilled spy and combatant.", powers: "Espionage, hand-to-hand combat" },
     { name: "Spider-Man", description: "Peter Parker, bitten by a radioactive spider.", powers: "Wall-crawling, super agility, spider-sense" },
     { name: "Captain America", description: "Steve Rogers, a frail young man transformed into a super-soldier during World War II.", powers: "Enhanced strength, speed, agility, stamina, accelerated healing, master combatant, shield mastery"}
-    
   ];
 
   const handleAddToFavourites = (name) => {
@@ -56,7 +53,21 @@ function App() {
   return (
     <div className="App">
       <h1>MARVEL</h1>
-      <div>
+      <div className="favourites-counter">
+        <h2>Favourite Avengers: {avengerCount}</h2>
+      </div>
+
+      {favourites.length > 0 && (
+        <div className="favourites-list">
+            {favourites.map((fav, index) => (
+              <ul key={index}>{fav}</ul>
+            ))}
+        </div>
+      )}
+
+      <p>Please select your favourite characters!</p>
+
+      <div className="characters-container">
         {avengerCharacters.map((character, index) => (
           <AvengerCard
             key={index}
@@ -67,21 +78,10 @@ function App() {
           />
         ))}
       </div>
-
-      {favourites.length > 0 && (
-        <div className="favourites-list">
-          <h2>Favourite Avengers</h2>
-          <p>How many Favourite Avengers do you have?: {avengerCount}</p>
-          <ul>
-            {favourites.map((fav, index) => (
-              <ul key={index}>{fav}</ul>
-            ))}
-          </ul>
-        </div>
-      )}
     </div>
   );
 }
 
 export default App;
+
 

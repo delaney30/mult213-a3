@@ -1,7 +1,17 @@
+/*Import Adobe Fonts */
+@import url('https://use.typekit.net/ety8jrd.css');
 body {
-  font-family: "apparat-excond", sans-serif;
-  font-weight: 900;
+  font-family: "ccmeanwhile", sans-serif;
+  font-weight: 400;
   font-style: normal;
+  font-size: 15px;
+  display: flex;
+  justify-content: center; 
+  background-image: url('https://addons-media.operacdn.com/media/CACHE/images/themes/85/38285/1.0-rev1/images/dda310ec-ad1e-43f7-bbae-ec743db33290/7389c5709370a8aeebd3b3b3b918e25e.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: beige;
 }
 
 code {
@@ -10,11 +20,33 @@ code {
 }
 
 .characters {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr; 
-  gap: 15px; 
-  border: 2px solid black;
-  padding: 50px;
-  margin: 40px;
+  border: 2px solid beige;
+  padding: 15px;
+  margin: 20px;
+  width: 500px;
+  color:beige
+}
+
+button {
+  background-color: #3e3148;
+  color: beige;
+  width: 150px;
+  height: 50px;
+  border-radius: 20px;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7);
+}
+
+.App {
+  padding: 15px;
+  margin: 20px;
+  width: 600px;
+  background-color: 	#141530;
+  color:beige;
+  box-shadow: 0 0 30px 5px rgba(255, 255, 255, 0.7);
 }
 
